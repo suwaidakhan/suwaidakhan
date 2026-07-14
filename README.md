@@ -40,7 +40,7 @@ flowchart LR
 
 | Project | What it does | Stack | Status |
 |---|---|---|---|
-| Edmonton Rental Comparer | Click-to-inspect rent, crime, school, and park data merged across 406 Edmonton neighbourhoods into one map | React, Vite, Leaflet, Tailwind | Private · walkthrough on request |
+| [Edmonton Rental Comparer](https://github.com/suwaidakhan/Edmonton-Rental_Comparer) | Click-to-inspect rent, crime, school, and park data merged across 406 Edmonton neighbourhoods into one map | React, Vite, Leaflet, Tailwind | Public |
 | vezir-on-hermes | LiveKit voice agent that answers a live phone line, plus a budget-capped AI ops assistant that runs cron jobs and lead-gen | Python, LiveKit, OpenAI Realtime | Private · walkthrough on request |
 | openclaw-memory | Knowledge-graph memory service that routes an agent's tool and skill choices at runtime | FastAPI, Neo4j, Graphiti | Private · walkthrough on request |
 
