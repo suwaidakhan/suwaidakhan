@@ -1,25 +1,32 @@
-<p align="center">
-  <strong>Suwaid Khan</strong>
-</p>
+<h1>Hi, I'm Suwaid 👋</h1>
 
-<p align="center">
-  Product Manager who builds and ships AI agent systems.
-</p>
+I'm a product manager who builds and ships AI agent systems end to end: autonomous content pipelines, voice agents on live phone lines, and knowledge-graph memory that agents use to make decisions.
 
-I build autonomous AI agent systems end to end: content pipelines, voice agents, and knowledge-graph memory, with cost and quality controls wired in from the start. My background is product; I ship the working system so the product judgment behind it is verifiable, not just described. Open to Product Manager roles.
+Most of my work is hands-on. I frame the product, build the system, wire in the cost and quality controls, and ship it, so the product thinking behind it is something you can clone, run, and inspect.
 
----
+My main project is [Mind Your Macro](https://suwaidakhan.github.io/mindyourmacro), an 11-agent pipeline that researches, writes, fact-checks, and publishes financial content to a live site with no human in the loop. 40 articles and 180+ commits in under two weeks.
 
-## Mind Your Macro — an 11-agent pipeline that publishes itself
+**What I work on**
 
-An autonomous content system that takes a topic from keyword gap to a fact-checked, schema-tagged article committed live to a production site, with no human in the loop.
+- AI agents: multi-agent pipelines, voice agents, autonomous publishing, agent memory
+- Cost-aware model routing: expensive reasoning models where judgment matters, cheap fast models for the volume work, plain deterministic code where autonomy would be dangerous
+- End-to-end product: problem framing, system design, QA gates, shipping to production
+- Knowledge graphs and RAG: Neo4j and Graphiti memory layers that route an agent's tools and skills at runtime
+- Data products: stitching public datasets into decision tools people can actually use
 
-- **Problem:** ranking financial content needs both Google trust signals and a machine-readable surface that answer engines will cite, at a volume no single writer can sustain.
-- **Built:** 11 specialized agents (Scout, Judge, Strategist, Researcher, Orion, Statistician, Inspector, Encoder, Publisher, then Diplomat and Closer for outreach) hand off through shared files, each doing one job and passing structured output to the next.
-- **Cost routing as a product decision:** reasoning-heavy stages run on DeepSeek R1 (topic judging) and Llama 3.3 70B (strategy); the high-volume drafting, research, and validation stages run on cheap, fast Gemini 2.0 Flash; the Publisher uses no LLM at all, so the git push is deterministic and cannot hallucinate an action.
-- **Outcome:** 40 published articles and 180+ commits in under two weeks, running against a live site.
+**Featured projects**
 
-Live: [suwaidakhan.github.io/mindyourmacro](https://suwaidakhan.github.io/mindyourmacro)
+- **[Mind Your Macro](https://github.com/suwaidakhan/mindyourmacro)** · 11-agent pipeline that researches, writes, fact-checks, and publishes to a live site on its own. [Live demo](https://suwaidakhan.github.io/mindyourmacro). Python, OpenRouter routing, Jekyll.
+- **[vezir-on-hermes](https://github.com/suwaidakhan/vezir-on-hermes)** · LiveKit voice agent on a live phone line, plus a budget-capped ops assistant running cron jobs and lead-gen. Python, LiveKit, OpenAI Realtime.
+- **[openclaw-memory](https://github.com/suwaidakhan/openclaw-memory)** · Knowledge-graph memory service that routes an agent's tool and skill choices at runtime. FastAPI, Neo4j, Graphiti.
+- **[Edmonton Rental Comparer](https://github.com/suwaidakhan/Edmonton-Rental_Comparer)** · Interactive map merging rent, crime, school, and park data across 406 Edmonton neighbourhoods into one decision tool. React, Leaflet.
+
+<details>
+<summary>How the Mind Your Macro pipeline works</summary>
+
+<br/>
+
+Eleven agents hand off through shared files. Reasoning-heavy stages run on DeepSeek R1 and Llama 3.3 70B; high-volume drafting runs on cheap Gemini 2.0 Flash; the Publisher uses no LLM at all, so the git push is deterministic and cannot hallucinate an action.
 
 ```mermaid
 flowchart LR
@@ -34,29 +41,14 @@ flowchart LR
   I --> J["Live site"]
 ```
 
----
-
-## Other projects
-
-| Project | What it does | Stack | Status |
-|---|---|---|---|
-| [Edmonton Rental Comparer](https://github.com/suwaidakhan/Edmonton-Rental_Comparer) | Click-to-inspect rent, crime, school, and park data merged across 406 Edmonton neighbourhoods into one map | React, Vite, Leaflet, Tailwind | Public |
-| [vezir-on-hermes](https://github.com/suwaidakhan/vezir-on-hermes) | LiveKit voice agent that answers a live phone line, plus a budget-capped AI ops assistant that runs cron jobs and lead-gen | Python, LiveKit, OpenAI Realtime | Public |
-| [openclaw-memory](https://github.com/suwaidakhan/openclaw-memory) | Knowledge-graph memory service that routes an agent's tool and skill choices at runtime | FastAPI, Neo4j, Graphiti | Public |
-
----
-
-<details>
-<summary>How I think about building</summary>
-
-<br/>
-
-- **Cost routing is a product decision.** On Mind Your Macro the expensive reasoning models run only on the stages that set direction (judging topics, planning strategy); the high-volume drafting runs on cheap models; the publish step runs on none. Spend follows risk and value, not habit.
-- **Determinism where autonomy is dangerous.** The stage that pushes to a live site uses no LLM, so an autonomous pipeline still cannot invent a bad commit. Guardrails before automation, not after.
-- **Honest status over inflated claims.** The Edmonton map shows a banner whenever a rent figure is a zone average rather than a true neighbourhood number, because a decision tool that hides its own data limits is worse than useless.
-
 </details>
 
----
+<h2>About Me</h2>
+
+- **Product manager who ships.** My background is product; I build the systems myself, so the judgment behind a roadmap is something you can verify.
+- Based in Edmonton, Alberta.
+- I care about the unglamorous parts of agent products: where to spend expensive tokens, what has to stay deterministic, and how a system fails safely when it runs with no human watching.
+
+**Open to Product Manager roles. Building something with AI agents? I'd love to talk.**
 
 [LinkedIn](https://linkedin.com/in/suwaid) · suwaidakhan@gmail.com
